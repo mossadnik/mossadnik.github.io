@@ -2,7 +2,7 @@
 layout: post
 math: true
 title:  "Generalized Newton updates for Non-Conjugate Variational Bayes"
-date:   2018-02-01 01:22:00 +0100
+date:   2018-02-01
 ---
 
 In this post I show how to apply generalized Newton updates to achieve fast and easy to implement updates for non-conjugate mean-field variational inference. The rules integrate well with standard coordinate ascent / variational message passing, since they essentially locally approximate non-conjugate messages by conjugate ones. The method is restricted to situations where all expectations can be computed in closed form.
