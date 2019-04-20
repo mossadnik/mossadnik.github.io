@@ -65,6 +65,10 @@ $$
 
 is the loss for a policy structure that consists of a single limit $$l_b$$.
 
+An example for getting a risk band is shown here:
+
+![](/assets/img/2019-04-20-slicing-and-pricing/risk-band.jpg)
+
 As special cases,
 
  * the ground-up loss is recovered using a single band that spans the entire unit interval and setting $$f_0 = 1$$. Equivalently, we can use any number and location of bands as long as $$\mathbf{f} = 1$$.
