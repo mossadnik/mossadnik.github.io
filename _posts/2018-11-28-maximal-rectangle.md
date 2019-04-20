@@ -1,8 +1,8 @@
 ---
 layout: post
 math: true
-title:  "Finding the Maximal Filled Rectangles in a Binary Image"
-date:   2018-11-28
+title: "Finding the Maximal Filled Rectangles in a Binary Image"
+date: 2018-11-28
 ---
 
 __Given a binary image $$\mathbf{A}$$, how can I find the filled axis-aligned rectangle with the maximum area?__
