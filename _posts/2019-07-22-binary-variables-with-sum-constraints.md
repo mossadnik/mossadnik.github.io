@@ -105,7 +105,7 @@ Here we can see the source of the aforementioned instability: While all the term
 The complexity of evaluating the marginals in this way is $$O(N^2)$$:
 
  * All required products can be evaluated simultaneously in $$O(N)$$ using the sum-product algorithm (implementation discussed [here]({% post_url 2018-10-29-leave-one-out-product %}))
- * Denoting $$z = e^{i\lambda}$$, only powers of $$z^k$$ with $$-N \leq k \leq N$$ occur. This implies that the trapezoidal integration rule with $N + 1$ points solves the integral exactly (see e.g. [here](https://epubs.siam.org/doi/pdf/10.1137/130932132))
+ * Denoting $$z = e^{i\lambda}$$, only powers of $$z^k$$ with $$-N \leq k \leq N$$ occur. This implies that the trapezoidal integration rule with $$N + 1$$ points solves the integral exactly (see e.g. [here](https://epubs.siam.org/doi/pdf/10.1137/130932132))
  * Correspondingly, we can use the FFT to compute the required values of $$\tilde{f}(\lambda)$$ once in $$O(N\log_2 N)$$
 
 The last two points should not be surprising because we could have used the discrete Fourier transform instead of the continuous one.

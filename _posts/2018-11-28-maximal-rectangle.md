@@ -1,7 +1,7 @@
 ---
 layout: post
 math: true
-title: "Finding the Maximal Filled Rectangles in a Binary Image"
+title: "Finding the Maximal Filled Rectangle in a Binary Image"
 date: 2018-11-28
 ---
 
