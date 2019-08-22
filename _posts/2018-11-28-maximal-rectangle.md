@@ -9,7 +9,7 @@ __Given a binary image $$\mathbf{A}$$, how can I find the filled axis-aligned re
 
 The algorithm is based on [this stackoverflow question and links therein][1]. Implementation is in python (with numba).
 
-![](/assets/img/maximal-rect/basic-example.jpg)
+![](/assets/img/2018-11-28-maximal-rectangle/basic-example.jpg)
 
 ## Baseline
 
@@ -21,13 +21,13 @@ Further improvements can be achieved by searching fewer rectangles, so let's foc
 
 The key observation is that we need only search rectangles that cannot be extended, i.e. that are not contained in a larger feasible rectangle. In the image below, the red rectangle can be extended (to the right), while the blue one cannot:
 
-![](/assets/img/maximal-rect/rect-extendable.jpg)
+![](/assets/img/2018-11-28-maximal-rectangle/rect-extendable.jpg)
 
 ## Reducing the number of rectangles
 
 Let's assume that one of the coordinates of the rectangle is fixed, say its bottom. The restricted optimization problem amounts to finding the maximal rectangle containing only blue pixels:
 
-![](/assets/img/maximal-rect/histogram.jpg)
+![](/assets/img/2018-11-28-maximal-rectangle/histogram.jpg)
 
 Note that this is a one-dimensional problem for each row based on heights of the blue columns. The heights for all rows can be computed in linear time by a simple recurrence for each column:
 
@@ -58,7 +58,7 @@ with boundary conditions given by zero-padding the `heights` array on both sides
 
 How many such rectangles are there? Here's an illustration of the histogram from above with all maximal rectangles with `height > 0`:
 
-![](/assets/img/maximal-rect/hist-rects.jpg)
+![](/assets/img/2018-11-28-maximal-rectangle/hist-rects.jpg)
 
 There are 20 such rectangles, suggesting a linear number. This is in fact true, since a rectangle can occur in the following situations:
 
@@ -164,7 +164,7 @@ def get_maximal_rect(img):
 
 Due to linear runtime, the algorithm easily scales to large images. On my vintage Macbook Air, computing the solution for the 1 megapixel example below takes around 100ms.
 
-![](/assets/img/maximal-rect/large-example.jpg)
+![](/assets/img/2018-11-28-maximal-rectangle/large-example.jpg)
 
 ---
 ## Links

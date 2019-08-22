@@ -41,7 +41,7 @@ $$
 L(m, s^2) = k m - n e^{m}e^{\frac{1}{2}s^2} - \frac{m^2 + s^2 - 2\mu_0 m}{2\sigma_0^2} + \frac{1}{2} \log s^2 + \,\text{const}
 $$
 
-When there are no observations ($$n = k = 0$$), the model is conjugate and the maximum be found exactly - unsurprisingly this is just $$m = \mu_0, s^2 = \sigma_0^2$$. The term $$e^{m}e^{\frac{1}{2}s^2}$$ spoils this, however. 
+When there are no observations ($$n = k = 0$$), the model is conjugate and the maximum be found exactly - unsurprisingly this is just $$m = \mu_0, s^2 = \sigma_0^2$$. The term $$e^{m}e^{\frac{1}{2}s^2}$$ spoils this, however.
 
 ## Generalized Newton's Method
 
@@ -82,7 +82,7 @@ $$
 
 Some examples of the convergence are shown below for an empirical rate of $$0.1$$ and various $$n$$. For comparison, the maximum likelihood estimate and corresponding Gamma credible interval is shown as well. Note that discrepancies for small counts are due to the variational Gaussian, which is not a good fit close to the domain boundary.
 
-![examples](/assets/img/normal-poisson-convergence.png)
+![examples](/assets/img/2018-02-01-generalized-newton-vb/normal-poisson-convergence.png)
 
 ## Summary
 
