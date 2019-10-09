@@ -38,7 +38,7 @@ $$
 To update $$\rho$$, we need to compute marginals under the distribution
 
 $$
-q_r(z) \propto \nu_r(z) e^{\sum_{ij}\mu_{ij} + \gamma_{ij}}
+q_r(z) \propto \nu_r(z) e^{\sum_{ij}\left(\mu_{ij} + \gamma_{ij}\right)z_{ij}}
 $$
 
 which is simply
