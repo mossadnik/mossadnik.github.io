@@ -5,3 +5,5 @@ _site
 
 # jupyter
 .ipynb_checkpoints/
+Untitled*.ipynb
+_*.ipynb

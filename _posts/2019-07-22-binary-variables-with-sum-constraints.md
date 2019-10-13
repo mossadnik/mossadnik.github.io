@@ -6,8 +6,6 @@ date: 2019-07-22
 ---
 
 
-# Binary vectors with sum constraints
-
 In this post we look into the statistics of binary variables with constraints on their sum, but otherwise independent. A well-known special case is that of categorical variables, where we constrain the sum to one. How can this be generalized to more general constraints?
 
 __Note:__ While the solution below works in principle, it is not numerically stable. In the next part I discuss how to make it practical.
