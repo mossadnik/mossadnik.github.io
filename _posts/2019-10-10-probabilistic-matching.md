@@ -144,7 +144,7 @@ for each column and row, i.e. $$2N$$ in total. This is combined with the normali
 
 ![](/assets/img/2019-10-10-probabilistic-matching/partition-function-degenerate.png)
 
-While this is not spectacularly good, this is also the worst case for the approximation with independent Bernoullis. If we consider the opposite limit of probabilities that all $$\mu_{ij} = \pm \infty$$ and such that they specify a valid solution (i.e. respecting all sum constraints), then the approximation is exact.
+While this is not spectacularly good, the approximation captures the dependence on $$N$$. Moreover, this is the worst case for the approximation with independent Bernoullis. If we consider the opposite limit of probabilities that all $$\mu_{ij} = \pm \infty$$ and such that they specify a valid solution (i.e. respecting all sum constraints), then the approximation is exact.
 
 In practice, we are somewhere in the middle. Based on the above considerations, we can expect the approximation to be better the closer the probabilities are to specifying a unique solution.
 
