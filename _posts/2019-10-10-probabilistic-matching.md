@@ -35,12 +35,12 @@ where $$Z$$ is the partition function. Evaluating the partition function is in [
 
 Namely, if $$f_c(z)$$ is dropped we are left with independent Bernoullis with a sum-to-one constraint on the rows - i.e. just a bunch of independent categorical variables. The same holds for dropping $$f_r(z)$$. This [measure factorization][jordan-combinatorial] allows to apply [Expectation Propagation][bishop-ep] (EP) to this problem.
 
-Recall that in EP each factor $$f_i(z)$$ is approximated by a simpler approximation $$g_i(z)$$. Here we approximate all factors by independent Bernoulli distributions, e.g.
+Recall that in EP each factor $$f_i(z)$$ is approximated by a simpler approximation $$g_i(z)$$. Here we approximate all factors by independent Bernoulli distributions, i.e.
 
 $$
 \begin{align}
 g_r(z) &= \prod_i g_{r,i}(z) \\
-&\propto \prod_i e^{\sum_j \nu_{r,ij} z_{ij}}
+&= \prod_i C_{r,i} \, e^{\sum_j \nu_{r,ij} z_{ij}}
 \end{align}
 $$
 
@@ -67,7 +67,7 @@ $$
 and we want to approximate it with
 
 $$
-Y(\phi; \nu, C) = \sum_z e^{\sum_i \left(\phi_i + \nu_i\right) z_i}
+Y(\phi; \nu, C) = C \sum_z e^{\sum_i \left(\phi_i + \nu_i\right) z_i}
 $$
 
 The parameters $$\nu, C$$ are set such that the moments
@@ -76,27 +76,24 @@ $$
 \begin{align}
 Z(\phi) &= \sum_i e^{\phi_i} \\
 \pi_i &\equiv \partial_{\phi_i} \log Z(\phi)
-\\ &= \frac{e^{\phi_i}}{Z}
+\\ &= \frac{e^{\phi_i}}{Z(\phi)}
 \end{align}
 $$
 
-match those of $$Y(\phi; \nu, C)$$.
-
-
-match those of the unnormalized distribution $$C e^{\sum_i (\phi_i + \nu_i)z_i}$$. From elementary calculations we get
+match those of $$Y(\phi; \nu, C)$$. From elementary calculations we get
 
 $$
 \begin{align}
 \nu_i &= \log\frac{\pi_i}{1 - \pi_i} - \phi_i \\
-C &= \frac{\sum_i e^{\phi_i}}{\prod_i \left(1 + e^{\phi_i + \nu_i}\right)}
+C &= \frac{Z(\phi)}{\prod_i \left(1 + e^{\phi_i + \nu_i}\right)}
 \end{align}
 $$
 
-Note that $$C$$ does not show up as an input to other calculations, so that it can be omitted if we are not interested in the partition function.
+Note that $$C$$ does not show up as an input to other calculations. It can be evaluated at the end of the iteration or omitted entirely.
 
 ## Putting it together
 
-In order to do the full problem, all we need to do is pick out a row or column and apply the basic building block recipe. We keep track of the constants $$C_{r,i}$$ and $$C_{c, j}$$, and the natural parameters $$\nu_{r,i}, \nu_{c,j}$$ and update them one factor at a time until convergence.
+In order to do the full problem, all we need to do is pick out a row or column and apply the basic building block recipe. We keep track of the natural parameters $$\nu_{r,ij}, \nu_{c,ij}$$ and update them one factor at a time until convergence. Afterwards, we compute the constants $$C_{r,i}$$ and $$C_{c, j}$$ once.
 
 To update e.g. the constraint on the $$i$$-th row, we use
 
