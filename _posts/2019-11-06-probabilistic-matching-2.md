@@ -5,7 +5,7 @@ title: "Entropy Approximations for Probabilistic Bipartite Matching"
 date: 2019-11-06
 ---
 
-This is a continuation of [this post]({% post_url 2019-10-10-probabilistic-matching %}). It is somewhat complementary, in that instead of starting from update equations I consider a general family of approximations based on entropy approximations. Expectation Propagation is just one such approximation and can be improved upon by considering other members of the same family. This post uses material from [Wainwright and Jordan, Graphical Models, Exponential Families, and Variational Inference] throughout. The relevant sections are listed at the bottom.
+This is a continuation of [this post]({% post_url 2019-10-10-probabilistic-matching %}). It is somewhat complementary, in that instead of starting from update equations I consider a general family of approximations based on entropy approximations. Expectation Propagation is just one such approximation and can be improved upon by considering other members of the same family. This post uses material from [Wainwright and Jordan, Graphical Models, Exponential Families, and Variational Inference][wainwright-jordan] throughout. The relevant sections are listed at the bottom.
 
 ## Bipartite Matching as Exponential Family
 
