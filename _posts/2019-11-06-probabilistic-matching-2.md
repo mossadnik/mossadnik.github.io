@@ -169,7 +169,7 @@ that is, we alternate normalizing the rows and columns. By the convexity of the 
 We use the same parametrization as above. In terms of the parameter $$\nu$$, the optimization problem is
 
 $$
-A(\theta) = \max_\nu \left(\theta_{11} + \theta_{22}\right)\nu  + \left(\theta_{12} - \theta_{21}\right)\,(1 - \nu) - 2 H_B(\nu)
+A(\theta) = \max_\nu \left(\theta_{11} + \theta_{22}\right)\nu  + \left(\theta_{12} - \theta_{21}\right)\,(1 - \nu) + 2 H_B(\nu)
 $$
 
 For comparison, since there are only two allowed configurations, the exact solution is equivalent to a Bernoulli variable. Hence the approximate entropy is off by a factor of two. Note that the entropy term is larger than in the exact solution, so that the approximation yields solutions that are too diffuse rather than too confident.
