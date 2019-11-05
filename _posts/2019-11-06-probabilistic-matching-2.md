@@ -16,7 +16,7 @@ We consider perfect matchings only and assume that $$U$$ and $$V$$ have the same
 $$
 \begin{align}
 \sum_{j} z_{ij} &= 1 & \text{Rows sum to one}\\
-\sum_{i} z_{ij} &= 1& \text{Columns sum to one} 1
+\sum_{i} z_{ij} &= 1& \text{Columns sum to one}
 \end{align}
 $$
 
@@ -32,7 +32,7 @@ $$
 \mu_{ij} = \mathbb{E}\left[z_{ij} \right]
 $$
 
-for the expected sufficient statistics. By linearity the $$\mu$$ inherit the constraints from the $$z$$, e.g. $$\sum_j \mu_{ij} = 1$$. We write $M$ for the space of feasible mean parameters including the constraints $$0 \leq \mu_{ij}\leq 1$$ and the sum constraints.
+for the expected sufficient statistics. By linearity the $$\mu$$ inherit the constraints from the $$z$$, e.g. $$\sum_j \mu_{ij} = 1$$. We write $$M$$ for the space of feasible mean parameters including the constraints $$0 \leq \mu_{ij}\leq 1$$ and the sum constraints.
 
 ## A Family of Entropy Approximations
 
