@@ -34,7 +34,7 @@ In order to get $$Z$$, note that $$X_i < Y_i$$ iff we have seen at least as many
 
 ![](/assets/img/2020-01-10-sorted-random-variables/labelled-edges.png)
 
-The conjecture is proven if we can show that the number of monotonic paths that traverse a given number of red edges is independent of the number of this number of edges. For the example path, there are four such edges.
+The conjecture is proven if we can show that the number of monotonic paths that traverse a given number of red edges $$a$$ is independent of $$a$$.
 
 We denote the number of paths of length $$2k$$ that connect two points on the diagonal and that traverse $$a$$ red edges by $$f(k, a)$$. $$f(k, a) = 0$$ unless $$0 \leq a \leq k$$. There are $$\begin{pmatrix}2k \\ k\end{pmatrix}$$ paths of length $$2k$$ in total, so that the conjecture states that
 
@@ -76,7 +76,7 @@ $$
 
 where we have used that $$f(n - k, a) = 0$$ if $$a > n - k$$ as well as $$f(n - k, a - k) = 0$$ if $$a - k < 0$$ to restrict the range of summation.
 
-Now insert the induction assumption $$f(k, a) = C_n$$ to find
+Now insert the induction assumption $$f(k, a) = C_k$$ to find
 
 $$
 \begin{align}
