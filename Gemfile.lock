@@ -196,7 +196,6 @@ GEM
     minima (2.1.1)
       jekyll (~> 3.3)
     minitest (5.10.3)
-    multipart-post (2.0.0)
     net-dns (0.8.0)
     nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
@@ -215,7 +214,7 @@ GEM
     ruby-enum (0.7.1)
       i18n
     ruby2_keywords (0.0.5)
-    rubyzip (1.2.1)
+    rubyzip (2.3.2)
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
